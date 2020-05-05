@@ -6,7 +6,7 @@ end
 
 desc 'Pushes tags and code to master, develop, and heroku'
 task :release do
-  `git push origin master ; git push origin develop ; git push --tags ; git push heroku master`
+  `git push origin master; git push --tags; git push heroku master`
 end
 
 def examples(file = 'examples.csv')
@@ -53,4 +53,9 @@ end
 desc 'Cleanup uploaded files'
 task :rm_uploads do
   `rm -rf public/uploads/*.jpg`
+end
+
+desc 'Run server'
+task :run do
+  `bundle exec ruby server.rb`
 end

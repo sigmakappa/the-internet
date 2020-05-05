@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
+ruby '2.4.1'
 
-gem 'travis'
 gem 'sinatra'
 gem 'sinatra-flash'
 gem 'sinatra-contrib'
@@ -9,6 +9,11 @@ gem 'zurb-foundation'
 gem 'compass'
 gem 'rake'
 gem 'pony'
-gem 'newrelic_rpm'
 gem 'faker'
 gem 'uuid'
+
+group :test do
+  gem 'selenium-webdriver', '~> 3.4.0'
+  gem 'rspec', '~> 3.5.0'
+  gem 'sauce_whisk', '~> 0.1.0'
+end
